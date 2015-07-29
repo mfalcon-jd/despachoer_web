@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 """
 Django settings for despachoer project.
 
@@ -43,6 +44,7 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'clientes',
+    'casos',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -77,9 +79,6 @@ TEMPLATES = [
 TEMPLATE_LOADERS = (
     'django.template.loaders.filesystem.Loader',
     'django.template.loaders.app_directories.Loader',
-    # 'django.template.context_processors.debug',
-    # 'django.template.context_processors.request',
-    # 'django.template.loaders.eggs.Loader',
 )
 
 TEMPLATE_DIRS = (
@@ -112,8 +111,12 @@ SUIT_CONFIG = {
         'sites',
     #    {'app': 'auth', 'icon':'icon-cog', 'models': ('user', 'group')},
         {'label': 'Control de Acceso', 'icon':'icon-cog', 'models': ('auth.user', 'auth.group')},
-        {'label': 'Cliente', 'icon':'icon-question-sign', 'url': '/admin/clientes/cliente'},
-    #    {'label': 'Cliente', 'icon':'icon-question-sign', 'url': '/support/'},
+        {'label': 'Cliente', 'icon':'icon-question-sign', 'models': ('clientes.cliente', 'clientes.telefono')},
+        {'label': 'Catalogos', 'icon':'icon-question-sign', 'models': ('casos.caso', 'casos.etapa')},
+        # {'label': 'Cliente', 'icon':'icon-question-sign', 'url': '/admin/clientes/cliente'},
+        # {'label': 'Casos', 'icon':'icon-question-sign', 'url': '/admin/casos/caso'},
+    #    {'label': 'Cliente', 'icon':'icon-question-s        # {'label': 'Cliente', 'icon':'icon-question-sign', 'url': '/admin/clientes/cliente'},
+        # {'label': 'Casos', 'icon':'icon-question-sign', 'url': '/admin/casos/caso'},ign', 'url': '/support/'},
     ),
 
     # misc

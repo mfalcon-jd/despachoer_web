@@ -8,8 +8,8 @@ class Cliente(models.Model):
     apellido_materno = models.CharField('Apellido Materno', max_length=200)
     direccion = models.CharField('Direccion', max_length=250, blank=True)
     fecha_nacimiento = models.DateField('Fecha de Nacimiento', blank=True)
-    email = models.EmailField('Email', max_length=250)
-    observaciones = models.CharField('Observaciones', max_length=1000)
+    email = models.EmailField('Email', max_length=250, blank=True)
+    observaciones = models.CharField('Observaciones', max_length=1000, blank=True)
 
     class Meta:
         verbose_name='Cliente'
