@@ -1,0 +1,16 @@
+{% extends "admin/base.html" %}
+{% load admin_static %}
+
+{% block title %}{{ title }} | {{ 'Administrador Despacho ER' }}{% endblock %}
+
+{% block branding %}
+<h1 id="site-name">{{ 'Administrador Despacho ER' }}</h1>
+{% endblock %}
+
+
+{ Footer copyright (right side) }
+{{% block copyright %}}
+{ Copyright &copy; 2013 Client<br>Developed by <a href="http://yoursite.com" target="_blank">YourName</a>}
+{{% endblock %}}
+
+{% block nav-global %}{% endblock %}
