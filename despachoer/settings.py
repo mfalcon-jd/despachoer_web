@@ -48,7 +48,6 @@ INSTALLED_APPS = (
     #'reversion',
     'clientes',
     'casos',
-    #'south',
 )
 
 MIDDLEWARE_CLASSES = (
